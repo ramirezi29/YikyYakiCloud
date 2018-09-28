@@ -8,20 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		475DE39D215DA9AE00F7A81E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475DE39C215DA9AE00F7A81E /* AppDelegate.swift */; };
-		475DE39F215DA9AE00F7A81E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475DE39E215DA9AE00F7A81E /* ViewController.swift */; };
 		475DE3A2215DA9AE00F7A81E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475DE3A0215DA9AE00F7A81E /* Main.storyboard */; };
 		475DE3A4215DA9B000F7A81E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475DE3A3215DA9B000F7A81E /* Assets.xcassets */; };
 		475DE3A7215DA9B000F7A81E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475DE3A5215DA9B000F7A81E /* LaunchScreen.storyboard */; };
+		475DE3B1215DA9BD00F7A81E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475DE3B0215DA9BD00F7A81E /* CloudKit.framework */; };
+		475DE3B6215DAB0B00F7A81E /* Yack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475DE3B5215DAB0B00F7A81E /* Yack.swift */; };
+		475DE3BD215DB16700F7A81E /* YakController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475DE3BC215DB16700F7A81E /* YakController.swift */; };
+		475DE3BF215DBB3200F7A81E /* YakTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475DE3BE215DBB3200F7A81E /* YakTableViewController.swift */; };
+		475DE3C1215DBB7300F7A81E /* YakPen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475DE3C0215DBB7300F7A81E /* YakPen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		475DE399215DA9AE00F7A81E /* YikYak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YikYak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475DE39C215DA9AE00F7A81E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		475DE39E215DA9AE00F7A81E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		475DE3A1215DA9AE00F7A81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		475DE3A3215DA9B000F7A81E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		475DE3A6215DA9B000F7A81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		475DE3A8215DA9B000F7A81E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		475DE3AE215DA9BA00F7A81E /* YikYak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YikYak.entitlements; sourceTree = "<group>"; };
+		475DE3B0215DA9BD00F7A81E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		475DE3B5215DAB0B00F7A81E /* Yack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yack.swift; sourceTree = "<group>"; };
+		475DE3BC215DB16700F7A81E /* YakController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YakController.swift; sourceTree = "<group>"; };
+		475DE3BE215DBB3200F7A81E /* YakTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YakTableViewController.swift; sourceTree = "<group>"; };
+		475DE3C0215DBB7300F7A81E /* YakPen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YakPen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475DE3B1215DA9BD00F7A81E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,7 @@
 			children = (
 				475DE39B215DA9AE00F7A81E /* YikYak */,
 				475DE39A215DA9AE00F7A81E /* Products */,
+				475DE3AF215DA9BD00F7A81E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +65,74 @@
 		475DE39B215DA9AE00F7A81E /* YikYak */ = {
 			isa = PBXGroup;
 			children = (
-				475DE39C215DA9AE00F7A81E /* AppDelegate.swift */,
-				475DE39E215DA9AE00F7A81E /* ViewController.swift */,
+				475DE3B9215DB0FA00F7A81E /* extension */,
+				475DE3B8215DB08400F7A81E /* ViewController */,
+				475DE3B7215DB07800F7A81E /* ModelController */,
+				475DE3B4215DAAFB00F7A81E /* Model */,
+				475DE3B2215DAAE000F7A81E /* UI */,
+				475DE3AE215DA9BA00F7A81E /* YikYak.entitlements */,
+				475DE3B3215DAAF300F7A81E /* Resources */,
+			);
+			path = YikYak;
+			sourceTree = "<group>";
+		};
+		475DE3AF215DA9BD00F7A81E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				475DE3B0215DA9BD00F7A81E /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		475DE3B2215DAAE000F7A81E /* UI */ = {
+			isa = PBXGroup;
+			children = (
 				475DE3A0215DA9AE00F7A81E /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		475DE3B3215DAAF300F7A81E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				475DE39C215DA9AE00F7A81E /* AppDelegate.swift */,
 				475DE3A3215DA9B000F7A81E /* Assets.xcassets */,
 				475DE3A5215DA9B000F7A81E /* LaunchScreen.storyboard */,
 				475DE3A8215DA9B000F7A81E /* Info.plist */,
 			);
-			path = YikYak;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		475DE3B4215DAAFB00F7A81E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				475DE3B5215DAB0B00F7A81E /* Yack.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		475DE3B7215DB07800F7A81E /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				475DE3BC215DB16700F7A81E /* YakController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		475DE3B8215DB08400F7A81E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				475DE3BE215DBB3200F7A81E /* YakTableViewController.swift */,
+				475DE3C0215DBB7300F7A81E /* YakPen.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		475DE3B9215DB0FA00F7A81E /* extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +167,14 @@
 				TargetAttributes = {
 					475DE398215DA9AE00F7A81E = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,8 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				475DE39F215DA9AE00F7A81E /* ViewController.swift in Sources */,
 				475DE39D215DA9AE00F7A81E /* AppDelegate.swift in Sources */,
+				475DE3B6215DAB0B00F7A81E /* Yack.swift in Sources */,
+				475DE3BF215DBB3200F7A81E /* YakTableViewController.swift in Sources */,
+				475DE3C1215DBB7300F7A81E /* YakPen.swift in Sources */,
+				475DE3BD215DB16700F7A81E /* YakController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +364,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YikYak/YikYak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7AYJDAX2C;
-				INFOPLIST_FILE = YikYak/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YikYak/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,9 +383,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YikYak/YikYak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7AYJDAX2C;
-				INFOPLIST_FILE = YikYak/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YikYak/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
